@@ -19,8 +19,10 @@
    ================================================== -->
    <link rel="stylesheet" href="css/base.css">
    <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="test.css">
    <link rel="stylesheet" href="css/vendor.css">
    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Product+Sans&family=Google+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Google+Sans+Text:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap">
 
 
    <!-- script
@@ -32,6 +34,108 @@
 	================================================== -->
 	<link rel="icon" type="image/jpg" href="images/profile.jpeg">
 
+	<style>
+      /* body {
+      background-color: #000;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    } */
+	
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 16px;
+      width: 100%;
+      max-width: 1200px;
+      box-sizing: border-box;
+    }
+    .card {
+      background-color: #1a1919;
+      color: #fff;
+      border: 0.1px solid #5f5f5f;
+      border-radius: 26px;
+      padding: 0 0px 0px;
+      /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); */
+	  /* height: 12rem; */
+    }
+	.card:hover {
+		border: 3px solid #cc005f;
+		cursor: pointer;
+	}
+    .card img {
+      width: 100%;
+      margin-bottom: 0px;
+	  border-top-left-radius: 26px;
+	  border-top-right-radius: 26px;
+	  height: 22rem;
+	  object-fit:fill
+
+    }
+    .card h3 {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.4;
+	  font-family: Google Sans,Arial,Helvetica,sans-serif;
+    }
+	
+    .card p {
+		display: -webkit-box;
+      margin: 8px 0 16px;
+      font-size: 14px;
+      color: #b3b3b3;
+	  font-family: Google Sans,Arial,Helvetica,sans-serif;
+	  -webkit-line-clamp: 2;
+	  line-clamp: 2;
+	  width: 90%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+	  -webkit-box-orient: vertical;
+	  line-height: 1.5em; /* Adjust this to match your design */
+      max-height: calc(1.5em * 2);
+    }
+    .card .date {
+      font-size: 12px;
+      color: #7f7f7f;
+      margin-top: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+	  font-family: Google Sans,Arial,Helvetica,sans-serif;
+    }
+    .card .date a {
+      color: #007BFF;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+	  font-family: Google Sans,Arial,Helvetica,sans-serif;
+    }
+    .card .date a:hover {
+      text-decoration: underline;
+	  font-family: Google Sans,Arial,Helvetica,sans-serif;
+    }
+    .card .date i {
+      margin-left: 4px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+      }
+    }
+    </style>
+
 </head>
 
 <body id="top">
@@ -42,7 +146,7 @@
    	<div class="row">
 
    		<div class="top-bar">
-   			<a class="menu-toggle" href="#"><span>Menu</span></a>
+   			<a class="menu-toggle" style="margin-top: 18px;" href="#"><span>Menu</span></a>
 
 	   		<div class="logo">
 		         <h2 style="color: #cc005f;">KELVIN</h2>
@@ -53,7 +157,7 @@
 						<li class="current"><a class="smoothscroll"  href="#intro" title="">Home</a></li>
 						<li><a class="smoothscroll"  href="#about" title="">About Me</a></li>
 						<li><a class="smoothscroll"  href="#Work" title="">Education</a></li>
-						<li><a class="smoothscroll"  href="#MORE" title="">MORE</a></li>
+						<li><a class="smoothscroll"  href="#MORE" title="">Portfolio</a></li>
 
 					</ul>
 				</nav>
@@ -205,11 +309,11 @@
 
    	<div class="row resume-timeline">
 
-   		<div class="col-twelve resume-header">
-
-   			<h2>Education </h2>
-
-   		</div> <!-- /resume-header -->
+		<div class="section-title" style="display: flex; align-items: center; flex-direction: column;">
+    
+			<h2 style="font-family: Google Sans; color: black; font-size: 5rem; font-weight: 200; margin-top: 18px;" class="glue-headline glue-headline--headline-2 section-title__title gemini-in-view-element gemini-in-view-element--in-view" data-in-view="">Education</h2>
+			
+			</div>
 
    		<div class="col-twelve" style="margin-top: 0;" >
 
@@ -359,9 +463,7 @@ technicien réseau .</p>
    ================================================== -->
 
 
-	<!-- services Section
-   ================================================== -->
-	<section id="MORE">
+	<!-- <section id="MORE">
 
 		<div class="overlay"></div>
 
@@ -374,7 +476,7 @@ technicien réseau .</p>
 
 
    		</div>
-   	</div> <!-- /section-intro -->
+   	</div> 
 
    	<div class="row services-content">
 
@@ -394,7 +496,7 @@ technicien réseau .</p>
 
 	            </div>
 
-			   </div> <!-- /service --><div class="service">
+			   </div> <div class="service">
 
 					<span class="icon"><i class="icon-earth"></i></span>
 
@@ -418,7 +520,7 @@ technicien réseau .</p>
 				   </ul>
 
 	            </div>
-	            </div> <!-- /services-list -->
+	            </div> 
 
 	      	<div class="service">
 
@@ -434,7 +536,7 @@ technicien réseau .</p>
 
 	         	</div>
 
-				</div> <!-- /service -->
+				</div> 
 
 				<div class="service">
 
@@ -450,13 +552,85 @@ randonnée.
 
 	            </div>
 
-			   </div> <!-- /service -->
+			   </div> 
 
 
 
-   	</div> <!-- /services-content -->
+   	</div> 
 
-	</section> <!-- /services -->
+	</section> -->
+
+	<section id="MORE" style="background-color: #000; display: flex; align-items: center; justify-content: center; padding: 2.5rem 0; flex-direction:column">
+		<div class="section-title" style="display: flex; align-items: center; flex-direction: column;">
+    
+			<h2 style="font-family: Google Sans; color: white; font-size: 5rem; font-weight: 200;" class="glue-headline glue-headline--headline-2 section-title__title gemini-in-view-element gemini-in-view-element--in-view" data-in-view="">Portfolio</h2>
+			<div style="font-family: Google Sans; color: rgb(167, 164, 164); font-weight: 100;" class="glue-headline glue-headline--headline-4 section-title__description gemini-in-view-element gemini-in-view-element--in-view" data-in-view=""><p data-block-key="w7c1h">Explore my catalog of projects, blogs, publications and posters.</p></div>
+			<div style="font-family: Google Sans;" class="section-title__cta gemini-in-view-element gemini-in-view-element--in-view" data-in-view=""><a class="button glue-button glue-button--high-emphasis" data-gtm-tag="cta-selection" href="/discover/blog/">
+			  <span style="font-family: Google Sans;" class="button__text">View all below</span>
+			  
+			</a></div>
+		  </div>
+		<div class="grid-container">
+			
+			<div class="card">
+			  <img src="https://lh3.googleusercontent.com/VdNH5uoemuWg0x7dA-2JqjZcTZnEQrh5SXca2gFdJPpV3iup3F5LiXm992Eltk0m7l_jntwgRYOyim3JQOG9l2Z0J67wFZBvI7xyTUZLpY5jGgBN=w400-h225-n-nu-rw" alt="Card image 1">
+			  <div style="padding-left: 1.2rem; padding-right: 1.4rem; padding-bottom: 1.1rem;">
+				<p class="glue-label" style="color: #5f6368; margin: 0; margin-bottom: 2px;">Responsibility &amp; Safety</p>
+				<h3 style="color: white;">Incidence Clearance Time Prediction</h3>
+			  <p class="description">Predicting Crash-Related Incident Clearance Time on Louisiana’s Rural Interstate Using Ensemble Tree-Based Learning Methods </p>
+			  <div class="date">
+				<span>16 December 2024</span>
+				<a href="#" target="_blank">
+				  <span>Read more</span> <i class='fas fa-arrow-right'></i>
+				</a>
+			  </div>
+			  </div>
+			</div>
+			<div class="card">
+			  <img src="https://lh3.googleusercontent.com/38hN7abkz0nIdpNKsLhnPO4w44AWfWJvMcldt6Pu1lo_cBSSYeY749XMscKC0YFAYpbfXr8RWLDWu7Tcr4hXnIp9K-jWspgE7daqOQM3ZKDN3nMIuFU=w400-h225-n-nu-rw" alt="Card image 2">
+			  <div style="padding-left: 1.2rem; padding-right: 1.4rem; padding-bottom: 1.1rem;">
+				<p class="glue-label" style="color: #5f6368; margin: 0; margin-bottom: 2px;">Responsibility &amp; Safety</p>
+				<h3 style="color: white;">Incidence Clearance Time Prediction</h3>
+			  <p class="description">Predicting Crash-Related Incident Clearance Time on Louisiana’s Rural Interstate Using Ensemble Tree-Based Learning Methods</p>
+			  <div class="date">
+				<span>16 December 2024</span>
+				<a href="#" target="_blank">
+				  <span>Read more</span> <i class='fas fa-arrow-right'></i>
+				</a>
+			  </div>
+			  </div>
+			</div>
+			<div class="card">
+				<img src="https://lh3.googleusercontent.com/38hN7abkz0nIdpNKsLhnPO4w44AWfWJvMcldt6Pu1lo_cBSSYeY749XMscKC0YFAYpbfXr8RWLDWu7Tcr4hXnIp9K-jWspgE7daqOQM3ZKDN3nMIuFU=w400-h225-n-nu-rw" alt="Card image 2">
+				<div style="padding-left: 1.2rem; padding-right: 1.4rem; padding-bottom: 1.1rem;">
+				  <p class="glue-label" style="color: #5f6368; margin: 0; margin-bottom: 2px;">Responsibility &amp; Safety</p>
+				  <h3 style="color: white;">Incidence Clearance Time Prediction</h3>
+				<p class="description">Predicting Crash-Related Incident Clearance Time on Louisiana’s Rural Interstate Using Ensemble Tree-Based Learning Methods</p>
+				<div class="date">
+				  <span>16 December 2024</span>
+				  <a href="#" target="_blank">
+					<span>Read more</span> <i class='fas fa-arrow-right'></i>
+				  </a>
+				</div>
+				</div>
+			  </div>
+			
+			<div class="card">
+			  <img src="https://lh3.googleusercontent.com/38hN7abkz0nIdpNKsLhnPO4w44AWfWJvMcldt6Pu1lo_cBSSYeY749XMscKC0YFAYpbfXr8RWLDWu7Tcr4hXnIp9K-jWspgE7daqOQM3ZKDN3nMIuFU=w400-h225-n-nu-rw" alt="Card image 3">
+			  <div style="padding-left: 1.2rem; padding-right: 1.4rem; padding-bottom: 1.1rem;">
+				<p class="glue-label" style="color: #5f6368; margin: 0; margin-bottom: 2px;">Responsibility &amp; Safety</p>
+				<h3 style="color: white;">Incidence Clearance Time Prediction</h3>
+			  <p class="description" >Predicting Crash-Related Incident Clearance Time on Louisiana’s Rural Interstate Using Ensemble Tree-Based Learning Methods</p>
+			  <div class="date">
+				<span>16 December 2024</span>
+				<a href="#" target="_blank">
+				  <span>Read more</span> <i class='fas fa-arrow-right'></i>
+				</a>
+			  </div>
+			  </div>
+		  </div>
+
+	</section>
 
 
 	<!-- stats Section
